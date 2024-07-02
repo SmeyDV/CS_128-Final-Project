@@ -1,3 +1,7 @@
+<?php
+session_start(); // Start the session
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,30 +10,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lohak Handcraft Market</title>
     <link rel="stylesheet" href="styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <a href="index.html"> <img src="logo.png" class="logo" alt="Logo"></a>
+        <a href="index.php"> <img src="logo.png" class="logo" alt="Logo"></a>
         <div class="search-bar">
             <input type="text" placeholder="What you looking for...">
             <button>Search</button>
         </div>
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
             <a href="product.html">Products</a>
             <a href="aboutpage.html">About</a>
             <a href="#">Contact</a>
         </nav>
-        <a href="loginpage.html" class="login-button">Login</a>
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
+            <a href="logout.php" class="login-button">Logout</a>
+        <?php else : ?>
+            <a href="loginpage.html" class="login-button">Log in</a>
+            <a href="signup.html" class="signup-button-header">Sign Up</a>
+        <?php endif; ?>
         <a href="#" class="cart-icon">🛒 <span>0</span></a>
     </header>
 
@@ -56,48 +64,42 @@
                 techniques dating back more than seven centuries to the ancient city of Angkor.
             </h1>
             <div class="part2-content-pic">
-                <img
-                    src="https://www.cambodiaembassyuk.org/wp-content/uploads/2021/12/8.-Admire-Khmer-arts-handicrafts-1024x640.webp">
+                <img src="https://www.cambodiaembassyuk.org/wp-content/uploads/2021/12/8.-Admire-Khmer-arts-handicrafts-1024x640.webp">
 
                 <p>
                     Our marketplace is dedicated to preserving and celebrating the rich cultural heritage of
                     Cambodia.
                 </p>
             </div>
-
-
         </div>
         <hr>
         <section class="part3">
             <div class="part3-content">
                 <h1>Our Blog</h1>
                 <hr>
-                
+
                 <div class="part3-content-pic">
                     <div>
-                        <img src="https://www.thefairtradevillage.com/wp-content/uploads/2019/06/AHA-Official-Seal-of-Authenticity.jpg"
-                            alt="Image 1">
+                        <img src="https://www.thefairtradevillage.com/wp-content/uploads/2019/06/AHA-Official-Seal-of-Authenticity.jpg" alt="Image 1">
                         <h4>Finding genuine Cambodian handmade gifts </h4>
                         <p style="font-weight:lighter; color:gray; padding-bottom:10px;">June 6, 2019</p>
                         <p>In busy workshops at Siem Reap’s Fair Trade Village, some of Cambodia’s most accomplished
                             artisans are busy creating carvings, ceramics, jewelry and …</p>
-                            <button>Read more</button>
+                        <button>Read more</button>
                     </div>
                     <div>
-                        <img src="https://pppenglish.sgp1.digitaloceanspaces.com/image/main/20243/25_3_2024_hol_dgi.jpg"
-                            alt="Image 1">
+                        <img src="https://pppenglish.sgp1.digitaloceanspaces.com/image/main/20243/25_3_2024_hol_dgi.jpg" alt="Image 1">
                         <h4>Hol Pidan Exhibition in Phnom Penh</h4>
                         <p style="font-weight:lighter; color:gray; padding-bottom:10px;">March 21 to June 21, 2024</p>
                         <p>The National Museum of Cambodia is currently hosting an exhibition dedicated to Hol Pidan fabrics, which showcases the intricate and culturally significant Khmer handicraft …</p>
-                            <button>Read more</button>
+                        <button>Read more</button>
                     </div>
                     <div>
-                        <img src="https://moitruongdulich.vn/en/mypicture/images/Myfolder/2023/T7/287Traditional-bamboo-weaving-helps-Khmer-people-in-Soc-Trang-escape-poverty-1.jpg"
-                            alt="Image 1">
+                        <img src="https://moitruongdulich.vn/en/mypicture/images/Myfolder/2023/T7/287Traditional-bamboo-weaving-helps-Khmer-people-in-Soc-Trang-escape-poverty-1.jpg" alt="Image 1">
                         <h4>Expansion of Khmer Handicraft Villages in Vietnam</h4>
                         <p style="font-weight:lighter; color:gray; padding-bottom:10px;">December 01, 2018</p>
                         <p>Vietnam's Trà Vinh Province, several ethnic Khmer handicraft villages have experienced significant growth The villages in Đại An and Hàm Giang communes, as well as the sedge mat weaving village in Hàm Tân,…</p>
-                            <button>Read more</button>
+                        <button>Read more</button>
                     </div>
                 </div>
             </div>
@@ -113,9 +115,7 @@
                 </form>
             </div>
         </section>
-
     </main>
-
 
     <footer>
         <p>&copy; LUHAK. All rights reserved.</p>
