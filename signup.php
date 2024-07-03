@@ -13,6 +13,7 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
@@ -36,14 +37,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "This email is already registered.";
     } else {
         // Prepare and bind
-        $insert_query = "INSERT INTO users (email, password) VALUES (?, ?)";
+        $insert_query = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($insert_query);
-        $stmt->bind_param("ss", $email, $hashed_password);
+        $stmt->bind_param("sss", $username, $email, $hashed_password);
 
         if ($stmt->execute()) {
             echo "Signup successful!";
             // Redirect to login page after successful signup
-            header("Location: loginpage.html");
+            header("Location: loginpage.php");
             exit();
         } else {
             echo "Error: " . $stmt->error;

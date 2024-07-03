@@ -20,7 +20,7 @@ session_start(); // Start the session
 </head>
 
 <body>
-    <header>
+<header>
         <a href="index.php"> <img src="logo.png" class="logo" alt="Logo"></a>
         <div class="search-bar">
             <input type="text" placeholder="What you looking for...">
@@ -33,13 +33,18 @@ session_start(); // Start the session
             <a href="#">Contact</a>
         </nav>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
-            <a href="logout.php" class="login-button">Logout</a>
+            <div class="account-info">
+                
+                <a href="logout.php" class="login-button">Logout</a>
+            </div>
         <?php else : ?>
-            <a href="loginpage.html" class="login-button">Log in</a>
+            <a href="loginpage.php" class="login-button">Log in</a>
             <a href="signup.html" class="signup-button-header">Sign Up</a>
         <?php endif; ?>
+        <a href="profile.php" class="account-icon"><i class="fa-regular fa-user fa-lg"></i></a>
         <a href="#" class="cart-icon">🛒 <span>0</span></a>
     </header>
+
 
     <main>
         <section class="hero">
@@ -54,7 +59,7 @@ session_start(); // Start the session
             <div class="hero-content">
                 <h1>Experience the Artistry of Cambodian Handcrafts</h1>
                 <p>Discover pure Khmer handcraft product</p>
-                <a href="product.html" class="cta-button">Explore Our Collection</a>
+                <a href="loginpage.php" class="cta-button">Explore Our Collection</a>
             </div>
         </section>
 
@@ -72,7 +77,7 @@ session_start(); // Start the session
                 </p>
             </div>
         </div>
-        <hr>
+        
         <section class="part3">
             <div class="part3-content">
                 <h1>Our Blog</h1>
@@ -134,6 +139,7 @@ session_start(); // Start the session
 
         setInterval(changeImage, 4000); // Change image every 4 seconds
     </script>
+    <script src="https://kit.fontawesome.com/1f1017027a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -119,6 +119,23 @@ nav a:hover {
   box-shadow: rgba(94, 180, 220, 0.878) 0px 15px 10px -10px;
 }
 
+/* Styling for account information */
+.account-info {
+  display: flex;
+  align-items: center;
+}
+
+.account-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.username {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
 /* Hero  */
 
 .hero {

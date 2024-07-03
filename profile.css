@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  width: 60%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-header {
+  text-align: center;
+  padding: 30px;
+  background-color: #3498DB;
+  color: white;
+}
+
+.profile-header .profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-header .username {
+  font-size: 24px;
+  margin: 0;
+  float: left;
+}
+
+.profile-header .email {
+  font-size: 18px;
+  margin: 0;
+}
+
+.profile-details {
+  padding: 30px;
+}
+
+.profile-details h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #3498DB;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.profile-actions {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.profile-actions .edit-button,
+.profile-actions .logout-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #3498DB;
+  border-radius: 5px;
+}
+
+.profile-actions .edit-button:hover,
+.profile-actions .logout-button:hover {
+  background-color: #3498DB;
+}
