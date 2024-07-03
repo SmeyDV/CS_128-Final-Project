@@ -1,80 +1,113 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e6f0ff; /* Light blue background */
   margin: 0;
   padding: 0;
 }
 
 .profile-container {
-  width: 60%;
+  max-width: 600px;
   margin: 50px auto;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  border-radius: 10px;
 }
 
 .profile-header {
   text-align: center;
-  padding: 30px;
-  background-color: #3498DB;
-  color: white;
+  margin-bottom: 20px;
 }
 
-.profile-header .profile-picture {
+.profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  border: 3px; /* Blue border around the profile picture */
 }
 
-.profile-header .username {
-  font-size: 24px;
-  margin: 0;
-  float: left;
-}
-
-.profile-header .email {
-  font-size: 18px;
-  margin: 0;
+.username {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #007BFF; /* Blue text color for the username */
 }
 
 .profile-details {
-  padding: 30px;
-}
-
-.profile-details h2 {
-  margin-top: 0;
-  border-bottom: 2px solid #3498DB;
-  padding-bottom: 10px;
   margin-bottom: 20px;
 }
 
+.profile-details h2 {
+  margin-bottom: 10px;
+  color: #0056b3; /* Darker blue for section headers */
+}
+
 .profile-details p {
-  font-size: 18px;
-  margin: 10px 0;
+  margin: 5px 0;
+  color: #333; /* Darker text for details */
 }
 
 .profile-actions {
   text-align: center;
-  padding: 20px;
-  border-top: 1px solid #ccc;
-  background-color: #f9f9f9;
 }
 
-.profile-actions .edit-button,
-.profile-actions .logout-button {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  background-color: #3498DB;
+.profile-actions form {
+  margin-bottom: 20px;
+}
+
+.profile-actions input[type="number"],
+.profile-actions input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  border: 1px solid #007BFF; /* Blue border for inputs */
+  padding: 5px;
   border-radius: 5px;
 }
 
-.profile-actions .edit-button:hover,
-.profile-actions .logout-button:hover {
-  background-color: #3498DB;
+.profile-actions input[type="submit"] {
+  background-color: #007BFF; /* Blue submit button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-actions input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button,
+.edit-button,
+.logout-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button {
+  background-color: #6c757d; /* Grey back button */
+}
+
+.back-button:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+.edit-button {
+  background-color: #007BFF; /* Blue edit button */
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.logout-button {
+  background-color: #f44336; /* Red logout button */
+}
+
+.logout-button:hover {
+  background-color: #c2362b; /* Darker red on hover */
 }

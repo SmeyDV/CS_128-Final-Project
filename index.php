@@ -59,7 +59,7 @@ session_start(); // Start the session
             <div class="hero-content">
                 <h1>Experience the Artistry of Cambodian Handcrafts</h1>
                 <p>Discover pure Khmer handcraft product</p>
-                <a href="loginpage.php" class="cta-button">Explore Our Collection</a>
+                <a href="product.html" class="cta-button">Explore Our Collection</a>
             </div>
         </section>
 
