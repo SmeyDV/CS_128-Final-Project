@@ -4,7 +4,7 @@ session_start(); // Start the session
 $servername = "localhost";
 $username = "root"; // default username for XAMPP
 $password = ""; // default password for XAMPP
-$dbname = "login_db";
+$dbname = "luhakDB";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
