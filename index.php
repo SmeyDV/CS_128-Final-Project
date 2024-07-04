@@ -42,7 +42,7 @@ session_start(); // Start the session
             <a href="signup.html" class="signup-button-header">Sign Up</a>
         <?php endif; ?>
         <a href="profile.php" class="account-icon"><i class="fa-regular fa-user fa-lg"></i></a>
-        <a href="#" class="cart-icon">🛒 <span>0</span></a>
+        
     </header>
 
 
