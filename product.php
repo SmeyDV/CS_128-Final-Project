@@ -88,7 +88,7 @@ $result = $conn->query($sql);
       <a href="index.php">Home</a>
       <a href="product.php">Products</a>
       <a href="aboutpage.html">About</a>
-      <a href="#">Contact</a>
+      <a href="contact.php">Contact</a>
     </nav>
     <a href="cart.php" class="cart-icon">🛒 <span><?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : '0'; ?></span></a>
   </header>

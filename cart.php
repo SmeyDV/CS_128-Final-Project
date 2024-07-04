@@ -3,7 +3,8 @@ session_start();
 include 'config.php';
 
 // Function to update cart item quantity
-function updateCartItemQuantity($product_id, $quantity) {
+function updateCartItemQuantity($product_id, $quantity)
+{
     foreach ($_SESSION['cart'] as &$item) {
         if ($item['id'] == $product_id) {
             $item['quantity'] = max(1, $quantity); // Ensure quantity is at least 1
@@ -13,7 +14,8 @@ function updateCartItemQuantity($product_id, $quantity) {
 }
 
 // Function to remove item from cart
-function removeCartItem($product_id) {
+function removeCartItem($product_id)
+{
     foreach ($_SESSION['cart'] as $key => $item) {
         if ($item['id'] == $product_id) {
             unset($_SESSION['cart'][$key]);
@@ -47,13 +49,13 @@ if (isset($_SESSION['cart'])) {
 if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     $product_ids = array_column($_SESSION['cart'], 'id');
     $product_ids_string = implode(',', $product_ids);
-    
+
     $sql = "SELECT ProductID, ProductName, Price, ImageURL FROM products WHERE ProductID IN ($product_ids_string)";
     $result = $conn->query($sql);
-    
+
     $products = [];
     if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) {
             $products[$row['ProductID']] = $row;
         }
     }
@@ -62,13 +64,28 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        .cart-container h1 {
+            font-family: "Lobster Two";
+            font-size: 36px;
+        }
+        .cart-container h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: light;
+        }
+    </style>
+
 </head>
+
 <body>
     <header>
         <!-- Add your header content here -->
@@ -76,8 +93,8 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
     <div class="cart-container">
         <h1>Your Shopping Cart</h1>
-        <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0): ?>
-            <?php foreach ($_SESSION['cart'] as $item): ?>
+        <?php if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) : ?>
+            <?php foreach ($_SESSION['cart'] as $item) : ?>
                 <?php
                 $product = $products[$item['id']] ?? null;
                 if (!$product) continue; // Skip if product not found in database
@@ -101,8 +118,8 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             <div class="total-price">
                 Total: $<?php echo number_format($total_price, 2); ?>
             </div>
-            <button onclick="window.location.href='checkout.php' " class= "checkout-btn">Proceed to Checkout</button>
-        <?php else: ?>
+            <button onclick="window.location.href='checkout.php' " class="checkout-btn">Proceed to Checkout</button>
+        <?php else : ?>
             <p>Your cart is empty.</p>
         <?php endif; ?>
         <a href="product.php" class="back-btn">Back to Products</a>
@@ -112,4 +129,5 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         <!-- Add your footer content here -->
     </footer>
 </body>
+
 </html>

@@ -2160,7 +2160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <!-- Header -->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height 600px; background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-gold-dragon-wallpaper-for-desktop-picture-image_2664254.jpg'); background-size: cover; background-position: center top;">
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-gold-dragon-wallpaper-for-desktop-picture-image_2664254.jpg'); background-size: cover; background-position: center top;">
         <span class="mask bg-gradient-default opacity-8"></span>
         <div class="container-fluid d-flex align-items-center">
             <div class="row">

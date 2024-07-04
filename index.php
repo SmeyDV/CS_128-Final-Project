@@ -20,7 +20,7 @@ session_start(); // Start the session
 </head>
 
 <body>
-<header>
+    <header>
         <a href="index.php"> <img src="logo.png" class="logo" alt="Logo"></a>
         <div class="search-bar">
             <input type="text" placeholder="What you looking for...">
@@ -30,19 +30,19 @@ session_start(); // Start the session
             <a href="index.php">Home</a>
             <a href="product.php">Products</a>
             <a href="aboutpage.html">About</a>
-            <a href="#">Contact</a>
+            <a href="contact.php">Contact</a>
         </nav>
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
             <div class="account-info">
-                
+
                 <a href="logout.php" class="login-button">Logout</a>
             </div>
         <?php else : ?>
             <a href="loginpage.php" class="login-button">Log in</a>
-            <a href="signup.html" class="signup-button-header">Sign Up</a>
+            <a href="signuppage.php" class="signup-button-header">Sign Up</a>
         <?php endif; ?>
         <a href="profile.php" class="account-icon"><i class="fa-regular fa-user fa-lg"></i></a>
-        
+
     </header>
 
 
@@ -59,7 +59,7 @@ session_start(); // Start the session
             <div class="hero-content">
                 <h1>Experience the Artistry of Cambodian Handcrafts</h1>
                 <p>Discover pure Khmer handcraft product</p>
-                <a href="product.html" class="cta-button">Explore Our Collection</a>
+                <a href="product.php" class="cta-button">Explore Our Collection</a>
             </div>
         </section>
 
@@ -77,7 +77,7 @@ session_start(); // Start the session
                 </p>
             </div>
         </div>
-        
+
         <section class="part3">
             <div class="part3-content">
                 <h1>Our Blog</h1>
