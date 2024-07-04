@@ -28,7 +28,7 @@ session_start(); // Start the session
         </div>
         <nav>
             <a href="index.php">Home</a>
-            <a href="product.html">Products</a>
+            <a href="product.php">Products</a>
             <a href="aboutpage.html">About</a>
             <a href="#">Contact</a>
         </nav>
