@@ -13,6 +13,35 @@ unset($_SESSION['error']); // Clear the error message after displaying it
     <link rel="stylesheet" href="loginpage.css">
     <link rel="stylesheet" href="styles.css">
     <title>Login Page</title>
+    <style>
+        .signup-link {
+            text-align: center;
+            margin-top: 15px;
+            
+        }
+
+        .signup-link a {
+            display: inline-block;
+            background: linear-gradient(90deg, #1e90ff, #00bfff);
+            
+            color: white;
+            
+            text-decoration: none;
+            font-size: 12px;
+            
+            font-weight: bold;
+            padding: 10px 20px;
+            
+            border-radius: 25px;
+           
+            transition: background 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            background: linear-gradient(90deg, #00bfff, #1e90ff);
+            /* Hover effect gradient */
+        }
+    </style>
 </head>
 
 <body>
@@ -27,6 +56,9 @@ unset($_SESSION['error']); // Clear the error message after displaying it
             <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
             <input value="Sign In" type="submit" class="login-button" />
         </form>
+        <div class="signup-link">
+            <a href="signup.html">Sign Up</a>
+        </div>
         <div class="social-account-container">
             <span class="title">Or Sign in with</span>
             <div class="social-accounts">
