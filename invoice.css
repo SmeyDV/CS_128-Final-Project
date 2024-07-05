@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+  font-family: 'Noto Sans Khmer', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Invoice Container Styles */
+.invoice-container {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.invoice-container h1,
+.invoice-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.invoice-details p {
+  margin: 0.5rem 0;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.invoice-table th,
+.invoice-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.invoice-table th {
+  background-color: #f4f4f4;
+}
+
+.invoice-table td {
+  background-color: #fff;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
