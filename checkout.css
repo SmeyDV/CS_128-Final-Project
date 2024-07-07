@@ -1,74 +1,153 @@
-.signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+:root {
+  --primary-color: #0a283f;
+  --secondary-color: #f4f4f4;
+  --accent-color: #2c8ac6;
+  --text-color: #333;
 }
 
-/* Signup Form Styles */
-.signup-form {
-  background-color: #fff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Noto Sans Khmer', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 80px;
+  width:80px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.signup-container {
+  max-width: 600px;
+  margin: 2rem auto;
   padding: 2rem;
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .signup-form h2 {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: var(--primary-color);
 }
 
 .signup-form label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
+  margin-top: 1rem;
+  font-weight: 500;
 }
 
-.signup-form input,
+.signup-form input[type="text"],
+.signup-form input[type="email"],
 .signup-form textarea {
-  width: calc(100% - 1rem);
+  width: 100%;
   padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.signup-form input[type="radio"] {
-  width: auto;
-  margin-right: 0.5rem;
+.signup-form textarea {
+  resize: vertical;
 }
 
-.signup-form button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #007bff;
-  color: #fff;
+.payment-options {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.payment-options img {
+  height: 30px;
+  margin-left: 0.5rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.form-buttons button {
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
- 
+  transition: background-color 0.3s ease;
 }
 
-.signup-form button:hover {
-  background-color: #0056b3;
+.form-buttons button[type="submit"] {
+  background-color: var(--accent-color);
+  color: white;
 }
 
-/* Image Styles */
-.signup-form img {
-  vertical-align: middle;
-  margin-left: 0.5rem;
-  object-fit: cover;
-  width: 100px;
-  height: 100px;
+.form-buttons button[type="button"] {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
-/* Responsive Styles */
+.form-buttons button:hover {
+  opacity: 0.9;
+}
+
 @media (max-width: 768px) {
-  .signup-form {
+  header {
+      flex-direction: column;
       padding: 1rem;
+  }
+
+  nav {
+      margin-top: 1rem;
+  }
+
+  nav a {
+      margin: 0 0.5rem;
+  }
+
+  .signup-container {
+      margin: 1rem;
+      padding: 1rem;
+  }
+
+  .form-buttons {
+      flex-direction: column;
+  }
+
+  .form-buttons button {
+      margin-top: 1rem;
   }
 }

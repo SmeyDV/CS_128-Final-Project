@@ -10,19 +10,22 @@ session_start(); // Start the session
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lohak Handcraft Market</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="stylesheet" href="image-slider.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        .signup-container{
+        .signup-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
+
         .signup-section {
             background-color: #e0a800;
             color: white;
@@ -61,6 +64,8 @@ session_start(); // Start the session
             background-color: #333;
         }
     </style>
+   
+
 </head>
 
 <body>
@@ -91,6 +96,7 @@ session_start(); // Start the session
 
 
     <main>
+        <!--  -->
         <section class="hero">
             <div class="hero-slider">
                 <img src="https://t4.ftcdn.net/jpg/01/02/53/49/360_F_102534906_tiedDFfDfgpIRwF7dPSU4zV2NvDtjh0S.jpg" alt="Khmer handcraft 1" class="active">
@@ -105,23 +111,50 @@ session_start(); // Start the session
                 <p>Discover pure Khmer handcraft product</p>
                 <a href="product.php" class="cta-button">Explore Our Collection</a>
             </div>
+
         </section>
 
-        <div class="part2-content">
+        <!--  -->
+        <section class="part2">
+        <div class="my-text">
             <h1><strong>LUHAK </strong>is a handcraft marketplace dedicated to authentic Cambodian arts, crafts and
                 traditional
                 techniques dating back more than seven centuries to the ancient city of Angkor.
             </h1>
-            <div class="part2-content-pic">
-                <img src="https://www.cambodiaembassyuk.org/wp-content/uploads/2021/12/8.-Admire-Khmer-arts-handicrafts-1024x640.webp">
+        </div>
+        <div class="part2-content">
+            <div class="container-slider">
+                <div class="slider-wrapper">
+                    <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    &#xE5CB;
+                    </button>
+                    <ul class="image-list">
+                        <img class="image-item" src="https://www.khmertimeskh.com/wp-content/uploads/2024/04/80734.jpg" alt="img-1" />
+                        <img class="image-item" src="https://www.khmertimeskh.com/wp-content/uploads/2020/08/7125.jpg" alt="img-2" />
+                        <img class="image-item" src="https://www.khmertimeskh.com/wp-content/uploads/2024/04/80737.jpg" alt="img-3" />
+                        <img class="image-item" src="https://siemreap.net/wp-content/uploads/2023/05/Sombai-Painted_bottles-1024x680.jpg" alt="img-4" />
+                        <img class="image-item" src="https://www.thefairtradevillage.com/wp-content/gallery/stone-production/FTV-Stone-Product_AHA-7333.jpg" alt="img-5" />
+                        <img class="image-item" src="https://thebettercambodia.com/wp-content/uploads/2022/08/istock-827740356-cropped-1624019228.jpg" alt="img-6" />
+                        <img class="image-item" src="https://www.thefairtradevillage.com/wp-content/gallery/stone-production/FTV-Stone-Product_AHA-1206.jpg" alt="img-7" />
+                        <img class="image-item" src="https://i.pinimg.com/736x/26/01/da/2601dafbb85a5e8c686ba8bfaaa24357.jpg" alt="img-8" />
+                        <img class="image-item" src="https://pppenglish.sgp1.digitaloceanspaces.com/image/main/field/image/18-grass1.jpg" alt="img-9" />
+                        <img class="image-item" src="https://www.topasiatour.com/pic/cambodia/guide/silverware.jpg" alt="img-10" />
+                    </ul>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">
 
-                <p>
-                    Our marketplace is dedicated to preserving and celebrating the rich cultural heritage of
-                    Cambodia.
-                </p>
+                    &#xE5CC;
+                    </button>
+                </div>
+                <div class="slider-scrollbar">
+                    <div class="scrollbar-track">
+                        <div class="scrollbar-thumb"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
+        </section>
+        <!--  -->
         <section class="part3">
             <div class="part3-content">
                 <h1>Our Blog</h1>
@@ -153,7 +186,7 @@ session_start(); // Start the session
                 </div>
             </div>
         </section>
-       
+
         <div class="signup-container">
             <section class="signup-section">
                 <h2>Stay Updated!</h2>
@@ -180,9 +213,11 @@ session_start(); // Start the session
             images[currentImage].classList.add('active');
         }
 
-        setInterval(changeImage, 4000); // Change image every 4 seconds
+        setInterval(changeImage, 5000); // Change image every 5 seconds
     </script>
     <script src="https://kit.fontawesome.com/1f1017027a.js" crossorigin="anonymous"></script>
+    <script src="image-slider.js" defer></script>
+    
 </body>
 
 </html>
