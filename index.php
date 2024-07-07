@@ -17,6 +17,50 @@ session_start(); // Start the session
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        .signup-container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .signup-section {
+            background-color: #e0a800;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            width: 1200px;
+        }
+
+        .signup-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .signup-section form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .signup-section input[type="email"] {
+            padding: 0.5rem;
+            width: 60%;
+            max-width: 300px;
+        }
+
+        .signup-section input[type="submit"] {
+            padding: 0.5rem 1rem;
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-section input[type="submit"]:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,16 +76,7 @@ session_start(); // Start the session
             <a href="aboutpage.html">About</a>
             <a href="contact.php">Contact</a>
         </nav>
-        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) : ?>
-            <div class="account-info">
 
-                <a href="logout.php" class="login-button">Logout</a>
-            </div>
-        <?php else : ?>
-            <a href="loginpage.php" class="login-button">Log in</a>
-            <a href="signuppage.php" class="signup-button-header">Sign Up</a>
-        <?php endif; ?>
-        <a href="profile.php" class="account-icon"><i class="fa-regular fa-user fa-lg"></i></a>
 
     </header>
 
@@ -109,17 +144,16 @@ session_start(); // Start the session
                 </div>
             </div>
         </section>
-        <hr>
-
-        <section class="part4">
-            <div class="signup-section">
+       
+        <div class="signup-container">
+            <section class="signup-section">
                 <h2>Stay Updated!</h2>
                 <form action="#" method="POST">
                     <input type="email" name="email" placeholder="Enter your email address" required>
                     <input type="submit" value="Sign Up">
                 </form>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>

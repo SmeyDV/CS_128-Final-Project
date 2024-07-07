@@ -1,109 +1,168 @@
 :root {
-  --primary-color: #0F3B58;
-  --secondary-color: #1E6091;
+  --primary-color: #4a4a4a;
+  --secondary-color: #f4f4f4;
+  --accent-color: #e0a800;
   --text-color: #333;
-  --bg-color: #F5F5F5;
-  --accent-color: #FFA500;
 }
 
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.header, .footer {
-  background: var(--primary-color);
+header {
+  background-color: #0A283F;
   color: white;
   padding: 1rem 0;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 50px;
+  margin-left: 2rem;
+}
+
+nav {
+  margin-right: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .about-section {
-  background: var(--secondary-color);
-  padding: 3rem;
-  margin: 3rem 0;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .about-section img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 12px;
-  margin-right: 3rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.about-section-content {
-  flex: 1;
+  max-width: 200px;
+  margin-bottom: 1rem;
 }
 
 .about-section h1 {
+  color: var(--primary-color);
   font-size: 2.5rem;
-  color: white;
   margin-bottom: 1rem;
 }
 
 .about-section p {
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.8;
+  margin-bottom: 1rem;
 }
 
-.about-us {
-  .about-us {
-    background-color: eeeeeee;
-    padding: 5rem 0;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 1400px;
-    margin: auto;
-    justify-content: center;
-    height: 100px;
-  }
+.highlights {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 3rem;
 }
 
-.about-us h2 {
-  font-size: 2.2rem;
-  font-weight: 600;
+.highlights h2 {
   color: var(--primary-color);
+  text-align: center;
   margin-bottom: 1.5rem;
 }
 
-.text {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-  text-align: left;
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.reason {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.reason h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.signup-section {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.signup-section h2 {
+  margin-bottom: 1rem;
+}
+
+.signup-section form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.signup-section input[type="email"] {
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 300px;
+}
+
+.signup-section input[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-section input[type="submit"]:hover {
+  background-color: #333;
+}
+
+footer {
+  background-color: #0A283F;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
-  .about-section {
+  header {
       flex-direction: column;
       text-align: center;
   }
 
-  .about-section img {
+  nav {
+      margin-top: 1rem;
       margin-right: 0;
-      margin-bottom: 2rem;
   }
 
-  .about-us {
-      padding: 3rem 0;
+  .signup-section form {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .signup-section input[type="email"],
+  .signup-section input[type="submit"] {
+      width: 100%;
+      max-width: none;
   }
 }
