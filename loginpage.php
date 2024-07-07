@@ -41,6 +41,7 @@ unset($_SESSION['error']); // Clear the error message after displaying it
             background: linear-gradient(90deg, #00bfff, #1e90ff);
             /* Hover effect gradient */
         }
+        
     </style>
 </head>
 

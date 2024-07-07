@@ -46,8 +46,9 @@ $conn->close();
 </head>
 
 <body>
-<header>
-    <img src="logo.png" class="logo">
+  <header>
+    
+    <a href="index.php"><img src="logo.png" alt="LUHAK Logo" class="logo"></a>
     <div class="search-bar">
       <input type="text" placeholder="Search for shoes...">
       <button>Search</button>
@@ -61,13 +62,13 @@ $conn->close();
 
   </header>
   <div class="about-us">
-      <h2><strong>LUHAK</strong> is more than just an online marketplace; it is a cultural hub dedicated to preserving
-        and promoting authentic Cambodian arts, crafts, and traditional techniques. This platform offers a unique
-        opportunity for both buyers and sellers to engage in a meaningful and rewarding exchange. Here are compelling
-        reasons why you should consider buying and selling at LUHAK.</h2>
+    <h2><strong>LUHAK</strong> is more than just an online marketplace; it is a cultural hub dedicated to preserving
+      and promoting authentic Cambodian arts, crafts, and traditional techniques. This platform offers a unique
+      opportunity for both buyers and sellers to engage in a meaningful and rewarding exchange. Here are compelling
+      reasons why you should consider buying and selling at LUHAK.</h2>
 
-    </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.573492945606!2d104.89540131114865!3d11.582402688572207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517bf7757d23%3A0x965c34888684bf1!2z4Z6f4Z624Z6A4Z6b4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6b4Z-Q4Z6Z4Z6i4Z6T4Z-S4Z6P4Z6a4Z6H4Z624Z6P4Z634Z6V4Z624Z6a4Z-J4Z624Z6g4Z-S4Z6C4Z6T!5e0!3m2!1skm!2skh!4v1720105095129!5m2!1skm!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.573492945606!2d104.89540131114865!3d11.582402688572207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517bf7757d23%3A0x965c34888684bf1!2z4Z6f4Z624Z6A4Z6b4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6b4Z-Q4Z6Z4Z6i4Z6T4Z-S4Z6P4Z6a4Z6H4Z624Z6P4Z634Z6V4Z624Z6a4Z-J4Z624Z6g4Z-S4Z6C4Z6T!5e0!3m2!1skm!2skh!4v1720105095129!5m2!1skm!2skh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 
@@ -92,7 +93,7 @@ $conn->close();
       <div class="contact-item">
         <span class="icon">📍</span>
         <span>Paragon Internatonal University<br> <br>
-        Handicraft Association Cambodia</span>
+          Handicraft Association Cambodia</span>
       </div>
       <div class="contact-item">
         <span class="icon">💻</span>
@@ -119,8 +120,8 @@ $conn->close();
     </div>
   </div>
   <footer>
-        <p>&copy; LUHAK. All rights reserved.</p>
-    </footer>
+    <p>&copy; LUHAK. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>

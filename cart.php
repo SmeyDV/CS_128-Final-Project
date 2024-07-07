@@ -70,6 +70,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
@@ -88,7 +89,13 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 
 <body>
     <header>
-        <!-- Add your header content here -->
+        <a href="index.php"><img src="logo.png" alt="LUHAK Logo" class="logo"></a>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="product.php">Products</a>
+            <a href="aboutpage.html">About</a>
+            <a href="contact.php">Contact</a>
+        </nav>
     </header>
 
     <div class="cart-container">
