@@ -58,6 +58,13 @@
   width: 325px;
   height: 400px;
   object-fit: cover;
+  transition: filter 0.6s ease;
+}
+
+.image-item:hover{
+  cursor: pointer;
+  filter: brightness(70%);
+  
 }
 
 .container .slider-scrollbar {
@@ -66,6 +73,7 @@
   display: flex;
   align-items: center;
 }
+
 
 .slider-scrollbar .scrollbar-track {
   background: #ccc;
